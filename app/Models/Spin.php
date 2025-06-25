@@ -10,7 +10,7 @@ class Spin extends Model
     use HasFactory;
     public $timestamps = false;
     protected $fillable = [
-        'customer_id', 'voucher_id', 'result_text', 'created_at',
+        'customer_id', 'voucher_item_id', 'result_text', 'created_at',
     ];
 
     public function customer()
@@ -18,8 +18,8 @@ class Spin extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function voucher()
+    public function voucherItem()
     {
-        return $this->belongsTo(Voucher::class);
+        return $this->belongsTo(VoucherItem::class);
     }
 }

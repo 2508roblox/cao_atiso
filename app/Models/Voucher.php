@@ -9,7 +9,7 @@ class Voucher extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'code', 'description', 'value', 'chance',
+        'voucher_name', 'description', 'value', 'chance',
     ];
 
     public function spins()
